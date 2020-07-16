@@ -1,8 +1,138 @@
-/* Reset */
+/* Debug */
+* * {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+}
+ul,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
 
 /* Layout */
+.l_wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
 
+.l_row {
+  overflow: hidden;
+}
+
+.l_col {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.l_col_12_12 {
+  width: 100%;
+}
+.l_col_11_12 {
+  width: 91.66666667%;
+}
+.l_col_10_12 {
+  width: 83.33333333%;
+}
+.l_col_9_12 {
+  width: 75%;
+}
+.l_col_8_12 {
+  width: 66.66666667%;
+}
+.l_col_7_12 {
+  width: 58.33333333%;
+}
+.l_col_6_12 {
+  width: 50%;
+}
+.l_col_5_12 {
+  width: 41.66666667%;
+}
+.l_col_4_12 {
+  width: 33.33333333%;
+}
+.l_col_3_12 {
+  width: 25%;
+}
+.l_col_2_12 {
+  width: 16.66666667%;
+}
+.l_col_1_12 {
+  width: 8.33333333%;
+}
+
+.l_header {
+  position: relative;
+}
+
+.header-logo {
+  margin: 8px;
+}
+.header-point {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navigation {
+}
+
+ul.nav-menu {
+}
+
+li.nav-item {
+  display: inline-block;
+  padding: 8px;
+}
+
+.animations {
+}
+
+.ani-item {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ani-cover {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 5px solid cyan;
+  vertical-align: top;
+}
+
+.ani-info {
+  margin: 8px;
+}
+.ani-title {
+  font-size: 16px;
+}
+.ani-description {
+  font-size: 12px;
+}
 
 /* Module */
 
+/* Commons */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
