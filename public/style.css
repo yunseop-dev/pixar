@@ -1,7 +1,7 @@
 /* Debug */
-* * {
+/* * * {
   background-color: rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Reset */
 body {
@@ -76,10 +76,18 @@ li {
 
 .l_header {
   position: relative;
+  background-color: rgb(49, 55, 62);
+}
+.l_section {
+  background-color: rgb(28, 31, 35);
+}
+.l_footer {
+  border-top: 1px solid rgb(102, 102, 102);
+  background-color: rgb(28, 31, 35);
 }
 
 .header-logo {
-  margin: 8px;
+  margin: 24px 8px;
 }
 .header-point {
   position: absolute;
@@ -88,6 +96,7 @@ li {
 }
 
 .navigation {
+  background-color: rgb(39, 44, 50);
 }
 
 ul.nav-menu {
@@ -95,22 +104,32 @@ ul.nav-menu {
 
 li.nav-item {
   display: inline-block;
-  padding: 8px;
+  padding: 12px 16px;
+  font-size: 12px;
+  color: rgb(129, 132, 136);
+}
+
+li.nav-item.selected {
+  color: white;
+  background-color: rgb(28, 31, 35);
 }
 
 .animations {
+  background-color: rgb(28, 31, 35);
+  padding-top: 16px;
 }
 
 .ani-item {
   display: block;
   border-radius: 16px;
   overflow: hidden;
+  background-color: rgb(17, 17, 17);
 }
 
 .ani-cover {
   max-width: 100%;
   height: auto;
-  border-bottom: 5px solid cyan;
+  border-bottom: 5px solid rgb(183, 48, 33);
   vertical-align: top;
 }
 
@@ -119,9 +138,17 @@ li.nav-item {
 }
 .ani-title {
   font-size: 16px;
+  color: rgb(183, 48, 33);
 }
 .ani-description {
   font-size: 12px;
+  color: rgb(105, 105, 105);
+}
+
+.l_footer .contents {
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  padding: 16px 0;
 }
 
 /* Module */
