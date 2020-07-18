@@ -21,6 +21,18 @@ a {
   color: inherit;
 }
 
+/* Commons */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
 /* Layout */
 .l_wrapper {
   max-width: 1024px;
@@ -29,7 +41,7 @@ a {
 }
 
 .l_row {
-  margin: 0 -10px;
+  margin: 0 -10px -20px -10px;
 }
 
 .l_row:after {
@@ -84,8 +96,6 @@ a {
 }
 
 /* Components */
-
-/* start a */
 .header {
   position: relative;
   background-color: rgb(49, 55, 62);
@@ -101,6 +111,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 10;
 }
 
 .gnb {
@@ -123,60 +134,48 @@ a {
   color: white;
 }
 
-
 .section {
+  padding: 20px 0; 
   background-color: rgb(28, 31, 35);
-}
-.footer {
-  border-top: 1px solid rgb(102, 102, 102);
-  background-color: rgb(28, 31, 35);
-}
-.animations {
-  background-color: rgb(28, 31, 35);
-  padding-top: 16px;
 }
 
-.ani-item {
+.ani {
   display: block;
   border-radius: 16px;
   overflow: hidden;
   background-color: rgb(17, 17, 17);
 }
 
+.ani_red    { color: darkred; }
+.ani_blue   { color: dodgerblue; }
+.ani_purple { color: violet; }
+.ani_orange { color: orange; }
+
 .ani-cover {
   max-width: 100%;
   height: auto;
-  border-bottom: 5px solid rgb(183, 48, 33);
+  border-bottom: 5px solid;
   vertical-align: top;
 }
 
 .ani-info {
   margin: 8px;
 }
+
 .ani-title {
   font-size: 16px;
-  color: rgb(183, 48, 33);
+  margin-bottom: 20px;
 }
+
 .ani-description {
   font-size: 12px;
   color: rgb(105, 105, 105);
 }
 
-.footer .contents {
+.footer {
+  border-top: 1px solid rgb(102, 102, 102);
+  background-color: rgb(28, 31, 35);
   color: rgb(102, 102, 102);
   font-size: 12px;
   padding: 16px 0;
-}
-
-/* Module */
-
-/* Commons */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
 }
