@@ -267,8 +267,29 @@ a {
     display: none;
   }
 
-  .header {
+  .header, .detail {
     text-align: center;;
+  }
+
+  .rating {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .gnb {
+    margin: 0 -8px;
+  }
+
+  .detail-icon {
+    float: inherit;
+  }
+  
+  .detail-title {
+    margin-bottom: 8px;
+  }
+
+  .detail-description {
+    margin-top: 16px;
   }
 
   .l_col_mobile_12_12 {
