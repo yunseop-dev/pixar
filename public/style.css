@@ -96,6 +96,19 @@ a {
   width: 8.33333333%;
 }
 
+/* Typography */
+:root {
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+body {
+  background-color: #222;
+}
+
 /* Components */
 .header {
   position: relative;
@@ -113,12 +126,18 @@ a {
   top: 0;
   right: 0;
   z-index: 10;
+  transition: transform .4s;
 }
 
 .gnb {
   background-color: rgb(39, 44, 50);
   color: rgb(129, 132, 136);
   font-size: 12px;
+}
+
+.gnb-menu {
+    white-space: nowrap;
+    overflow: auto;
 }
 
 .gnb-menu li {
@@ -137,6 +156,7 @@ a {
 
 .section {
   padding: 20px 0; 
+  min-height: calc( 100vh - 240px ); 
   background-color: rgb(28, 31, 35);
 }
 
@@ -181,13 +201,12 @@ a {
 
 
 .detail {
-  display: block;
   border-radius: 16px;
   overflow: hidden;
   background-color: rgb(238, 238, 238);
 }
 
-.detail_green    { color: green; }
+.detail_green { color: green; }
 
 .detail-cover {
   max-width: 100%;
@@ -205,31 +224,12 @@ a {
   margin: -60px 8px auto 8px;
 }
 
-.rating {
-  position: absolute;
-  background: url('./images/star.png') no-repeat;
-  height: 20px;
-  width: 100px;
-  right: 0;
-  top: 0;
+.detail-contents {
+    overflow: hidden;
 }
 
-.star {
-  background: url('./images/star.png') no-repeat;
-  height: 20px;
-  background-position: 0 -20px;
-}
-
-.star_1 {
-  width: 20px;
-}
-
-.star_2 {
-  width: 40px;
-}
-
-.star_3 {
-  width: 60px;
+.detail-subject {
+    overflow: hidden;
 }
 
 .detail-title {
@@ -239,6 +239,11 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  float: left;
+}
+
+.detail-subject-sidebar {
+    float: right;
 }
 
 .detail-subtitle {
@@ -253,6 +258,27 @@ a {
   line-height: 1.4;
 }
 
+.rating,
+.rating:before {
+    background-image: url(images/star.png);
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.rating:before {
+    content: ' ';
+    display: block;
+    width: 0;
+    background-position: left bottom;
+}
+
+.rating_1:before { width: 20%; }
+.rating_2:before { width: 40%; }
+.rating_3:before { width: 60%; }
+.rating_4:before { width: 80%; }
+.rating_5:before { width: 100%; }
+
 .footer {
   border-top: 1px solid rgb(102, 102, 102);
   background-color: rgb(28, 31, 35);
@@ -263,8 +289,12 @@ a {
 
 /* media */
 @media (max-width: 780px) {
+  :root {
+    font-size: 80%;
+  }
+  
   .header-point{
-    display: none;
+    transform: translateY(-100%);
   }
 
   .header, .detail {
@@ -280,10 +310,12 @@ a {
     margin: 0 -8px;
   }
 
-  .detail-icon {
-    float: inherit;
+  .detail-icon,
+  .detail-title,
+  .detail-subject-sidebar {
+    float: none;
   }
-  
+    
   .detail-title {
     margin-bottom: 8px;
   }
